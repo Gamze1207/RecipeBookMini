@@ -5,7 +5,7 @@ VisualStudioVersion = 17.14.36603.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeBookMini", "RecipeBookMini.csproj", "{F904EA54-6C89-4696-A830-7EF88E4C08F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeBookMini.Data", "..\RecipeBookMini.Data\RecipeBookMini.Data.csproj", "{21976C2D-B0CC-442F-BFC2-838CE719CA52}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeBookMini.Data", "..\RecipeBookMini.Data\RecipeBookMini.Data.csproj", "{EFB7D861-4E36-4B65-A8C6-C8572B7C523B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{F904EA54-6C89-4696-A830-7EF88E4C08F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F904EA54-6C89-4696-A830-7EF88E4C08F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F904EA54-6C89-4696-A830-7EF88E4C08F4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{21976C2D-B0CC-442F-BFC2-838CE719CA52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{21976C2D-B0CC-442F-BFC2-838CE719CA52}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{21976C2D-B0CC-442F-BFC2-838CE719CA52}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{21976C2D-B0CC-442F-BFC2-838CE719CA52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFB7D861-4E36-4B65-A8C6-C8572B7C523B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFB7D861-4E36-4B65-A8C6-C8572B7C523B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFB7D861-4E36-4B65-A8C6-C8572B7C523B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFB7D861-4E36-4B65-A8C6-C8572B7C523B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
