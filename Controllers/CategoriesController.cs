@@ -4,12 +4,12 @@ namespace RecipeBookMini.Controllers
     public class CategoriesController: Controller
     {
         public IActionResult Index()
-            {
+        {
                 return View();
-            }
+        }
     
-            public IActionResult Create()
-            {
+        public IActionResult Create()
+        {
                 return View();
         }
     }

@@ -19,7 +19,7 @@ namespace RecipeBookMini.Controllers
         }
         public IActionResult About()
         {
-            ViewData["Message"] = "Welcome to Recipebookmini - your personal mini recipe tracker!";
+            ViewData["Message"] = "Welcome to Recipe Book - your personal mini recipe tracker!";
             return View();
         }
 
