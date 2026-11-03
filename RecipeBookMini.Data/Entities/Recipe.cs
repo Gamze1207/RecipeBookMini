@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RecipeBookMini.Data.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,5 +18,6 @@ namespace RecipeBookMini.Data.Entities
         public Category Category { get; set; } = null!;
         public ICollection<Review> Reviews { get; set; } = new List<Review>();
         public ICollection<Ingredient> Ingredients { get; set; } = new List<Ingredient>();
+        public ICollection<CategoryType> CategoryTypes { get; set; } = new List<CategoryType>();
     }
 }

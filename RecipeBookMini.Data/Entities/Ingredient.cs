@@ -11,6 +11,7 @@ namespace RecipeBookMini.Data.Entities
         public Guid IngredientId { get; set; }
         public string Name { get; set; } = string.Empty;
         public string UnitOfMeasurement { get; set; } = string.Empty;
+        public Guid RecipeId { get; set; }
         public Recipe Recipe { get; set; } = null!;
     }
 }
