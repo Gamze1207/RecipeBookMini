@@ -17,22 +17,21 @@ namespace RecipeBookMini.Controllers
         {
             var recipes = await _recipeService.GetAllAsync(searchTerm, categoryFilter);
 
-            // Pass filter values back to view if needed
             ViewData["SearchTerm"] = searchTerm;
             ViewData["CategoryFilter"] = categoryFilter;
 
             return View(recipes);
         }
 
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
+            ViewBag.Categories = await _recipeService.GetAllCategoriesAsync();
             return View();
         }
 
         [HttpPost]
         public async Task<IActionResult> Create(string name, string products, string preparationMethod, int preparationTimeMinutes, Guid categoryId, List<CategoryType> categoryTypes)
         {
-            // Validate that preparation time is positive
             if (preparationTimeMinutes <= 0)
             {
                 ModelState.AddModelError(nameof(preparationTimeMinutes), "Preparation time must be positive.");

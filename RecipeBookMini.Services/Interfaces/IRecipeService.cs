@@ -12,5 +12,6 @@ namespace RecipeBookMini.Services.Interfaces
     {
         Task<List<Recipe>> GetAllAsync(string searchTerm = null, CategoryType? categoryFilter = null);
         Task CreateAsync(string name, string products, string preparationMethod, int preparationTimeMinutes, Guid categoryId, List<CategoryType> categoryTypes);
+        Task<List<Category>> GetAllCategoriesAsync();
     }
 }

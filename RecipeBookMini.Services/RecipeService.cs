@@ -56,5 +56,10 @@ namespace RecipeBookMini.Services
 
             return await query.OrderBy(r => r.Name).ToListAsync();
         }
+
+        public async Task<List<Category>> GetAllCategoriesAsync()
+        {
+            return await _db.Categories.OrderBy(c => c.Name).ToListAsync();
+        }
     }
 }
