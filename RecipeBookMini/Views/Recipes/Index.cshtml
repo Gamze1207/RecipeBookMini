@@ -1,5 +1,72 @@
-﻿@*
+﻿@using RecipeBookMini.Data.Enums
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+    ViewData["Title"] = "Recipes";
+}
+<h1>Recipe Catalog</h1>
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <a asp-controller="Recipes"
+       asp-action="Create"
+       class="btn btn-primary">
+        Add Recipe
+    </a>
+
+    <form method="get" asp-action="Index" class="d-flex gap-2">
+        <input type="text"
+               name="searchTerm"
+               value="@ViewData["SearchTerm"]"
+               class="form-control"
+               placeholder="Search by name..." />
+
+        <select name="categoryFilter" class="form-select" asp-items="Html.GetEnumSelectList<CategoryType>()">
+            <option value="">All Categories</option>
+        </select>
+
+        <button type="submit" class="btn btn-outline-secondary">Filter</button>
+        <a asp-action="Index" class="btn btn-outline-danger">Reset</a>
+    </form>
+</div>
+
+@if (!Model.Any())
+{
+    <p>No recipes have been added yet.</p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Ingredients</th>
+                <th>Preparation Method</th>
+                <th>Prep Time (min)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var recipe in Model)
+            {
+                <tr>
+                    <td>@recipe.Name</td>
+                    <td>@(recipe.Category?.Name ?? string.Join(", ", recipe.CategoryTypes))</td>
+                    <td>
+                        @if (recipe.Ingredients != null && recipe.Ingredients.Any())
+                        {
+                            var names = new List<string>();
+                            foreach (var ing in recipe.Ingredients)
+                            {
+                                names.Add(ing.Name);
+                            }
+                            @string.Join(", ", names)
+                        }
+                    </td>
+                    <td>@recipe.PreparationMethod</td>
+                    <td>@recipe.PreparationTimeMinutes min</td>
+                </tr>
+            }
+        </tbody>
+    </table>
 }
